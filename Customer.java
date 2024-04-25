@@ -24,8 +24,10 @@ public class Customer {
 			System.out.println("4.exit");
 			System.out.println("5.Print Only Fruit Name");
 			System.out.println("6.To Print all fruit details ");
-			System.out.println("7.call fruit function");
-			System.out.println("8.Total fruit in the basket");
+			System.out.println("7.All stale fruits  ");
+			System.out.println("8.Fruit special functionality");
+			System.out.println("9.Total fruit in the basket");
+	
 			a=sc.nextInt();
 			switch(a){
 			case 1:
@@ -84,6 +86,15 @@ public class Customer {
 				}
 				break;
 			case 7:
+				System.out.println("Invoke specific Functionality");
+				int p;
+				p=sc.nextInt();
+				if(f[p].taste().equals("sour")) {
+					f[p].setFresh(false);
+				}
+				System.out.println("donee");
+				break;
+			case 8:
 				int q;
 				q=sc.nextInt();
 				if(f[q] instanceof Mango) {
@@ -103,12 +114,20 @@ public class Customer {
 					o1.juice();
 				}
 				break;
-			case 8:
+			case 9:
 				int o;
 				o=i;
-				System.out.println("Total no of fruit in the basket="+o--);
+				o--;
+				
+				System.out.println("Total no of fruit in the basket="+o);
 				System.out.println();
 				break;
+			case 10:
+				int m;
+				m=sc.nextInt();
+				f[m].setFresh(false);
+				break;
+				
 			default:
 				System.out.println("Invalid!!!");
 				break;

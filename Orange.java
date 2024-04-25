@@ -5,7 +5,7 @@ public class Orange extends Fruit {
 		super(name,color,weight,fresh);
 	}
 	public String taste() {
-		return "sweet";
+		return "sour";
 	}
 	public void juice() {
 		System.out.println("Fruit Name="+getName()+" weight="+getWeight()+" Extracting juice");
